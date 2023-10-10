@@ -29,16 +29,3 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
-
-Route::get('wsb', function(){
-    return view('wsb', ['firstName' => 'Janusz', 'lastName' => 'Nowak', 'city' => 'Gniezno']);
-});
-
-Route::get('/pages/{page}', function($page){
-   $pages = [
-       'about' => 'Strona WSB',
-       'contact' => 'wsb@poznan.pl',
-       'home' => 'Strona domowa'
-   ];
-   return $pages[$page];
-});
